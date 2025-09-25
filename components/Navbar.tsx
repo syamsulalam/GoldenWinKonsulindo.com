@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { SERVICES_DATA, ARTICLES_DATA } from '../constants';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { SERVICES_DATA } from '../constants';
 import { ArticleCategory } from '../types';
 
 const Navbar: React.FC = () => {
@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
     const [mobileInsightsOpen, setMobileInsightsOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     const articleCategories = Object.values(ArticleCategory);
 
@@ -25,14 +26,14 @@ const Navbar: React.FC = () => {
         setIsOpen(false);
         setMobileServicesOpen(false);
         setMobileInsightsOpen(false);
-    }, [location.pathname]);
+    }, [location.pathname, location.hash]);
     
     const handleScrollLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
         if (location.pathname === '/') {
             document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
         } else {
-            window.location.href = `/${targetId}`;
+            navigate(`/${targetId}`); // Navigate to homepage with hash
         }
         setIsOpen(false);
     };
@@ -42,14 +43,14 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="relative flex items-center justify-between h-20">
                     <div className="flex-shrink-0">
-                        <Link to="/" className="text-white text-xl font-bold font-serif hover:text-brand-gold transition-colors">
-                            GoldenWinKonsulindo
+                        <Link to="/" className="flex items-center text-white hover:opacity-80 transition-opacity">
+                            <img src="/img/logo.png" alt="GoldenWinKonsulindo Logo" className="h-10 w-auto" />
                         </Link>
                     </div>
                     
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <NavLink to="/" className={({isActive}) => `px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive ? 'text-brand-gold font-bold' : 'text-gray-300 hover:text-brand-gold'}`}>Home</NavLink>
+                        <NavLink to="/" className={({isActive}) => `px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive && location.hash === '' ? 'text-brand-gold font-bold' : 'text-gray-300 hover:text-brand-gold'}`}>Home</NavLink>
                         
                         {/* Services Mega Menu */}
                         <div className="relative group">
