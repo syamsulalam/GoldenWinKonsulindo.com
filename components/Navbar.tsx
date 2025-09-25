@@ -31,9 +31,11 @@ const Navbar: React.FC = () => {
     const handleScrollLink = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
         if (location.pathname === '/') {
+            // If on homepage, smooth scroll
             document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
         } else {
-            navigate(`/${targetId}`); // Navigate to homepage with hash
+            // If on another page, navigate to homepage with hash
+            navigate(`/${targetId}`);
         }
         setIsOpen(false);
     };
@@ -50,20 +52,20 @@ const Navbar: React.FC = () => {
                     
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <NavLink to="/" className={({isActive}) => `px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive && location.hash === '' ? 'text-brand-gold font-bold' : 'text-gray-300 hover:text-brand-gold'}`}>Home</NavLink>
+                        <NavLink to="/" className={({isActive}) => `px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive && location.pathname === '/' ? 'text-brand-gold font-bold' : 'text-gray-300 hover:text-brand-gold'}`}>Home</NavLink>
                         
                         {/* Services Mega Menu */}
                         <div className="relative group">
-                             <button className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 group-hover:text-brand-gold transition-colors flex items-center">
+                             <button className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${location.pathname.startsWith('/services') ? 'text-brand-gold font-bold' : 'text-gray-300 group-hover:text-brand-gold'}`}>
                                 Services
                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                             </button>
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max max-w-2xl bg-brand-dark rounded-b-lg shadow-xl p-6 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2">
-                                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max max-w-3xl bg-brand-dark rounded-b-lg shadow-xl p-6 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2">
+                                <div className="grid grid-cols-2 gap-x-10 gap-y-4">
                                     {SERVICES_DATA.map(service => (
-                                        <Link key={service.id} to={`/services/${service.id}`} className="block p-2 rounded-md hover:bg-white/10 transition-colors">
+                                        <Link key={service.id} to={`/services/${service.id}`} className="block p-3 rounded-md hover:bg-white/10 transition-colors">
                                             <p className="font-semibold text-white">{service.title}</p>
-                                            <p className="text-xs text-gray-400">{service.description.split('.')[0]}.</p>
+                                            <p className="text-xs text-gray-400 mt-1">{service.description.split('.')[0]}.</p>
                                         </Link>
                                     ))}
                                 </div>
@@ -74,14 +76,18 @@ const Navbar: React.FC = () => {
 
                         {/* Insights Mega Menu */}
                          <div className="relative group">
-                            <NavLink to="/insights" className={({isActive}) => `px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${isActive ? 'text-brand-gold font-bold' : 'text-gray-300 hover:text-brand-gold'}`}>
+                            <button className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center ${location.pathname.startsWith('/insights') || location.pathname.startsWith('/article') ? 'text-brand-gold font-bold' : 'text-gray-300 group-hover:text-brand-gold'}`}>
                                 Insights
                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </NavLink>
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-brand-dark rounded-b-lg shadow-xl p-4 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2">
-                                <div className="flex flex-col space-y-2">
+                            </button>
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-brand-dark rounded-b-lg shadow-xl p-4 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2">
+                                <div className="flex flex-col space-y-1">
+                                     <Link to="/insights" className="block p-3 text-sm font-semibold text-gray-200 rounded-md hover:bg-white/10 hover:text-white transition-colors">
+                                        All Insights
+                                    </Link>
+                                    <div className="border-t border-white/10 my-1 mx-2"></div>
                                     {articleCategories.map(category => (
-                                        <Link key={category} to={`/insights/${category.toLowerCase()}`} className="block p-2 text-sm text-gray-300 rounded-md hover:bg-white/10 hover:text-white transition-colors">
+                                        <Link key={category} to={`/insights/${category.toLowerCase()}`} className="block p-3 text-sm text-gray-300 rounded-md hover:bg-white/10 hover:text-white transition-colors">
                                             {category}
                                         </Link>
                                     ))}
