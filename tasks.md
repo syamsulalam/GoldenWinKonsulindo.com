@@ -82,3 +82,8 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Update data structures in `types.ts` and `constants.ts` with detailed CV info.
   - [x] Make team member cards on homepage link to their respective detail pages.
   - [x] Update `Navbar.tsx` to support cross-page anchor link navigation.
+
+- [x] **Task 13: Asset & Team Updates**
+    - [x] Add Syamsul Alam to the team and update `teams.md`.
+    - [x] Update all image paths to use a centralized `/img/` directory.
+    - [x] Replace text logo in Navbar with an image logo.

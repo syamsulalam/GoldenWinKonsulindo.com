@@ -120,3 +120,25 @@ A Law graduate from Airlangga University specializing in business law, with expe
 ### Skills
 - Contract Drafting, Legal Research, Legal Opinion, Legal Compliance, Permit Processing (OSS), Contract Management and Review.
 - **Languages**: Indonesian (native), English (professional working proficiency).
+
+---
+
+## Syamsul Alam
+
+### Personal
+- **Name**: Syamsul Alam
+- **Born**: East Java, Indonesia
+
+### Professional Summary
+A dynamic and seasoned entrepreneur with a proven track record of establishing and leading multiple successful companies since 2016. His expertise lies in the digital realm, where he has consistently provided clients with essential services ranging from secure web hosting to the development of professional online portfolios. With a keen understanding of digital infrastructure and market needs, Syamsul excels at building businesses from the ground up and empowering others to thrive online.
+
+### Education
+- **Universitas Airlangga**: Studied Economics and Business, developing a strong foundation for his entrepreneurial ventures.
+
+### Entrepreneurial Experience
+- **2016 - Present**: Founder & Company Owner
+  - Founded and directs a diverse portfolio of technology and service-based companies.
+  - Specializes in providing critical digital infrastructure, including secure web hosting, domain management, and custom website development for a wide range of clients.
+  - Successfully launched and scaled multiple online businesses, demonstrating a sharp eye for market opportunities and sustainable growth.
+  - Manages all aspects of business operations, from strategic planning and financial oversight to marketing and client relations.
+  - Built a reputation for reliability and excellence in the digital services industry.

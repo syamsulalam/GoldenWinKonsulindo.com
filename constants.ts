@@ -5,7 +5,7 @@ export const PROFILE_DATA = {
   name: "Dr. Windijarto, SE. MBA",
   title: "Expert Consultant in Economics and Financial Management",
   bio: "With over 32 years of distinguished experience as a lecturer, researcher, and consultant in social, economic, and management fields, Dr. Windijarto brings unparalleled depth of knowledge to every project. His expertise lies in financial management and economics, guiding corporations and public institutions toward strategic growth and operational excellence. Holding a Doctorate in Economics from Universitas Airlangga and an MBA from the University of Central Arkansas, he combines rigorous academic theory with practical, real-world solutions.",
-  imageUrl: "https://i.imgur.com/uG2D22u.png", // Image extracted from CV and uploaded
+  imageUrl: "/img/windijarto.png",
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
@@ -13,7 +13,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "windijarto",
     name: "Dr. Windijarto, SE. MBA",
     title: "Founder & Lead Consultant",
-    imageUrl: "https://i.imgur.com/uG2D22u.png",
+    imageUrl: "/img/windijarto.png",
     bio: "Over 32 years of experience in economics and financial management, guiding corporations and public institutions toward strategic growth. Holds a Doctorate in Economics and an MBA.",
     fullBio: "With a distinguished career spanning more than three decades, Dr. Windijarto is a leading authority in economic and financial management consulting. As a seasoned lecturer, researcher, and hands-on consultant, he has provided strategic guidance to a diverse range of clients, including government bodies, state-owned enterprises, and private corporations. His work focuses on creating sustainable value through meticulous financial analysis, robust feasibility studies, and strategic corporate planning. Dr. Windijarto is dedicated to translating complex economic theories into actionable strategies that drive growth, efficiency, and long-term success.",
     education: [
@@ -48,7 +48,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "rooswanti",
     name: "Dr. Rr. Rooswanti Putri A.A., S.Kom., M.M.",
     title: "Senior Consultant, Strategic Management",
-    imageUrl: "https://i.imgur.com/eB4g8lH.png",
+    imageUrl: "/img/roos.png",
     bio: "Doctor of Management Science with extensive experience in strategic management and IT. Specializes in feasibility studies, business process improvement, and technology integration.",
     fullBio: "Dr. Rr. Rooswanti is a specialist in strategic management, focusing on the intersection of technology and business performance. Her doctoral research on causal ambiguity in media provides her with a unique perspective on competitive strategy. She has a proven track record in leading complex projects, from developing IT master plans to formulating long-term corporate strategies (RJPP) for major industrial clients. Her expertise includes business process analysis, IT utilization for performance enhancement, and large-scale feasibility studies, making her a vital asset for clients navigating digital transformation and strategic planning.",
     education: [
@@ -73,7 +73,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "ahnaf",
     name: "Ahnaf Wajendra Pranaja, S.H.",
     title: "Legal & Compliance Associate",
-    imageUrl: "https://i.imgur.com/8Q9Z5qA.png",
+    imageUrl: "/img/ahnaf.png",
     bio: "Law graduate specializing in corporate and business law. Proficient in legal compliance, contract drafting, regulatory analysis, and managing licensing to support operations.",
     fullBio: "Ahnaf Wajendra Pranaja is a dedicated legal professional with a strong foundation in business and corporate law from Universitas Airlangga. He brings expertise in navigating complex regulatory landscapes, ensuring full legal and environmental compliance for large-scale projects. His experience includes managing permit applications through the Online Single Submission (OSS) system, conducting legal-social risk assessments, and performing comprehensive reviews of regulations related to environmental permits, labor compliance, and operational safety. Ahnaf is skilled in legal research, contract drafting, and providing the legal backbone for successful project execution.",
     education: [
@@ -83,6 +83,21 @@ export const TEAM_MEMBERS: TeamMember[] = [
         { period: "Feb 2024 - Present", company: "BKMP UNAIR", title: "Head of Technical Team for Social, Economic, & Public Health Survey", details: "Led RKL-RPL compliance, managed OSS Tuban permits, and performed legal-social risk assessments for oil refinery projects." },
         { period: "Des 2024 - Jan 2025", company: "AB & Partner's Law Office, Surabaya", title: "Legal Intern", details: "Analyzed breach of contract cases, conducted regulatory inventories, reviewed agreements, and drafted legal opinions." },
         { period: "Jul 2023 - Okt 2023", company: "BKMP UNAIR", title: "Member, Socioeconomic and Population Survey Team", details: "Conducted legal reviews on regulations for Hazardous Waste Management, Environmental Permits, and Labor Compliance." },
+    ],
+    consultingProjects: []
+  },
+  {
+    id: "syamsul-alam",
+    name: "Syamsul Alam",
+    title: "Entrepreneur & Digital Strategist",
+    imageUrl: "/img/alam.png",
+    bio: "Seasoned entrepreneur with a strong background in founding and scaling digital businesses. Specializes in web infrastructure, development, and creating robust online presences for clients.",
+    fullBio: "Syamsul Alam is a dynamic entrepreneur with a proven track record of establishing and leading multiple successful companies since 2016. His expertise lies in the digital realm, where he has consistently provided clients with essential services ranging from secure web hosting to the development of professional online portfolios. With a keen understanding of digital infrastructure and market needs, Syamsul excels at building businesses from the ground up and empowering others to thrive online. His practical, hands-on approach makes him a valuable strategist for any venture looking to solidify its digital footprint.",
+    education: [
+      { period: "N/A", institution: "Universitas Airlangga", degree: "Studies in Economics & Business" },
+    ],
+    experience: [
+        { period: "2016 - Present", company: "Multiple Ventures", title: "Founder & Company Owner", details: "Founded and directs a portfolio of technology and service-based companies. Specializes in providing digital infrastructure, including web hosting, development, and IT solutions for a diverse client base, from individual professionals to growing businesses." },
     ],
     consultingProjects: []
   }

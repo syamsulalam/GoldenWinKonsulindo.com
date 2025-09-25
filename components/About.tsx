@@ -14,7 +14,7 @@ const About: React.FC = () => {
             <img 
               src={PROFILE_DATA.imageUrl} 
               alt={PROFILE_DATA.name} 
-              className="rounded-lg shadow-2xl w-full max-w-sm mx-auto object-cover border-4 border-brand-gold"
+              className="rounded-lg shadow-2xl w-full max-w-xs mx-auto object-cover border-4 border-brand-gold"
             />
           </div>
           <div className="md:w-2/3">

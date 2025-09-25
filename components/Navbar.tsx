@@ -38,17 +38,16 @@ const Navbar: React.FC = () => {
         }, 100);
     }
   };
-
-  const logoColor = isScrolled || location.pathname !== '/' ? 'text-brand-gold' : 'text-white';
+  
   const linkColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark hover:text-brand-gold' : 'text-white hover:text-gray-300';
   const mobileIconColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark' : 'text-white';
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-light/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className={`text-xl font-bold transition-colors duration-300 ${logoColor}`}>
-            GoldenWinKonsulindo
+          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center">
+            <img src="/img/logo.png" alt="GoldenWinKonsulindo Logo" className="h-10 w-auto" />
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -57,7 +56,7 @@ const Navbar: React.FC = () => {
                 key={link.href} 
                 href={link.href} 
                 onClick={(e) => handleLinkClick(e, link.href)} 
-                className={`transition-colors duration-300 ${linkColor}`}
+                className={`transition-colors duration-300 font-medium ${linkColor}`}
               >
                 {link.label}
               </a>
@@ -77,7 +76,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden mt-4 bg-brand-light rounded-lg shadow-lg p-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-brand-dark hover:text-brand-gold transition-colors duration-300 text-center">
+                <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-brand-dark hover:text-brand-gold transition-colors duration-300 text-center font-medium">
                   {link.label}
                 </a>
               ))}
