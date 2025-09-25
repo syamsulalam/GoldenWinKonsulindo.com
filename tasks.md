@@ -46,10 +46,10 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Add the corresponding route in `App.tsx`.
   - [x] Update `Navbar.tsx` to link to the new Industries page.
 
-- [ ] **Task 19: Build Career Page**
-  - [ ] Create `CareerPage.tsx` to house career information and job listings.
-  - [ ] Develop a reusable `JobApplicationForm.tsx` component with validation and file upload capabilities.
-  - [ ] Add the route for the career page in `App.tsx`.
+- [x] **Task 19: Build Career Page**
+  - [x] Create `CareerPage.tsx` to house career information and job listings.
+  - [x] Develop a reusable `JobApplicationForm.tsx` component with validation and file upload capabilities.
+  - [x] Add the route for the career page in `App.tsx`.
 
 - [ ] **Task 20: Build Insights (Blog) Functionality**
   - [ ] Create `ArticleListPage.tsx`, a dynamic component that can display a list of articles based on a URL parameter (e.g., `/insights/news`).

@@ -7,7 +7,7 @@ const navLinks = [
   { href: '/#services', label: 'Services' },
   { href: '/industries', label: 'Industries' },
   { href: '/#team', label: 'Team' },
-  // { href: '/career', label: 'Career' }, // To be added
+  { href: '/career', label: 'Career' },
   // { href: '/insights', label: 'Insights' }, // To be added
   { href: '/#contact', label: 'Contact' },
 ];

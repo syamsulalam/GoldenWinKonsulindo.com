@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import TeamMemberPage from './pages/TeamMemberPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import IndustriesPage from './pages/IndustriesPage';
+import CareerPage from './pages/CareerPage';
 
 // Component to scroll to top on route change
 const ScrollToTop: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route path="/team/:memberId" element={<TeamMemberPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/career" element={<CareerPage />} />
       </Routes>
       <Footer />
     </div>
