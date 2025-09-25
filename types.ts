@@ -17,3 +17,10 @@ export interface Testimonial {
   author: string;
   title: string;
 }
+
+export interface TeamMember {
+  name: string;
+  title: string;
+  imageUrl: string;
+  bio: string;
+}

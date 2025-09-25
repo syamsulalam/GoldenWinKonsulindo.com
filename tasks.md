@@ -35,6 +35,12 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Layout with Dr. Windijarto's image and biographical text.
   - [x] Pull data from `constants.ts`.
 
+- [x] **Task 5.5: Develop Team Section**
+  - [x] Create `teams.md` to store CV data.
+  - [x] Add team member data to `constants.ts`.
+  - [x] Create `components/Team.tsx` with member profiles.
+  - [x] Integrate into `App.tsx` and `Navbar.tsx`.
+
 - [x] **Task 6: Develop Services Section**
   - [x] Create `components/Services.tsx`.
   - [x] Design a card-based layout for services.
@@ -52,7 +58,6 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Use placeholder data from `constants.ts`.
 
 - [x] **Task 9: Develop Contact Section**
-  - [x] Create `components/Contact.tsx`.
   - [x] Add a strong Call to Action.
   - [x] Display contact information.
 
@@ -67,3 +72,5 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Thoroughly test and refine the layout on various screen sizes (mobile, tablet, desktop).
   - [x] Add subtle animations or transitions for a more polished user experience.
   - [x] Ensure all accessibility best practices are followed.
+  - [x] Update Navbar text color to change on scroll.
+  - [x] Update contact info in Contact section and Footer.

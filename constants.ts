@@ -1,5 +1,5 @@
 
-import type { ConsultingProject, Testimonial } from './types';
+import type { ConsultingProject, Testimonial, TeamMember } from './types';
 
 export const PROFILE_DATA = {
   name: "Dr. Windijarto, SE. MBA",
@@ -7,6 +7,27 @@ export const PROFILE_DATA = {
   bio: "With over 32 years of distinguished experience as a lecturer, researcher, and consultant in social, economic, and management fields, Dr. Windijarto brings unparalleled depth of knowledge to every project. His expertise lies in financial management and economics, guiding corporations and public institutions toward strategic growth and operational excellence. Holding a Doctorate in Economics from Universitas Airlangga and an MBA from the University of Central Arkansas, he combines rigorous academic theory with practical, real-world solutions.",
   imageUrl: "https://i.imgur.com/uG2D22u.png", // Image extracted from CV and uploaded
 };
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    name: "Dr. Windijarto, SE. MBA",
+    title: "Founder & Lead Consultant",
+    imageUrl: "https://i.imgur.com/uG2D22u.png",
+    bio: "Over 32 years of experience in economics and financial management, guiding corporations and public institutions toward strategic growth. Holds a Doctorate in Economics and an MBA."
+  },
+  {
+    name: "Dr. Rr. Rooswanti Putri A.A., S.Kom., M.M.",
+    title: "Senior Consultant, Strategic Management",
+    imageUrl: "https://i.imgur.com/eB4g8lH.png",
+    bio: "Doctor of Management Science with extensive experience in strategic management and IT. Specializes in feasibility studies, business process improvement, and technology integration."
+  },
+  {
+    name: "Ahnaf Wajendra Pranaja, S.H.",
+    title: "Legal & Compliance Associate",
+    imageUrl: "https://i.imgur.com/8Q9Z5qA.png",
+    bio: "Law graduate specializing in corporate and business law. Proficient in legal compliance, contract drafting, regulatory analysis, and managing licensing to support operations."
+  }
+];
 
 export const CONSULTING_PROJECTS: ConsultingProject[] = [
     { year: 2024, name: "Feasibility Study and Partnership Scheme for Vocational Faculty Establishment in Gresik", client: "Universitas Airlangga" },
