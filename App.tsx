@@ -3,12 +3,14 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import TeamMemberPage from './pages/TeamMemberPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import TeamMemberPage from './pages/TeamMemberPage';
 import IndustriesPage from './pages/IndustriesPage';
 import CareerPage from './pages/CareerPage';
 import ArticleListPage from './pages/ArticleListPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
+import ApplicationSuccessPage from './pages/ApplicationSuccessPage';
+import ApplicationErrorPage from './pages/ApplicationErrorPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -23,17 +25,21 @@ const ScrollToTop = () => {
 const App: React.FC = () => {
   return (
     <>
-      <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/team/:memberId" element={<TeamMemberPage />} />
-        <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
-        <Route path="/industries" element={<IndustriesPage />} />
-        <Route path="/careers" element={<CareerPage />} />
-        <Route path="/articles" element={<ArticleListPage />} />
-        <Route path="/articles/:articleId" element={<ArticleDetailPage />} />
-      </Routes>
+      <ScrollToTop />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+          <Route path="/team/:memberId" element={<TeamMemberPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/articles" element={<ArticleListPage />} />
+          <Route path="/articles/:articleId" element={<ArticleDetailPage />} />
+          <Route path="/careers" element={<CareerPage />} />
+          <Route path="/application-success" element={<ApplicationSuccessPage />} />
+          <Route path="/application-error" element={<ApplicationErrorPage />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
