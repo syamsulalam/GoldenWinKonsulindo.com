@@ -18,9 +18,28 @@ export interface Testimonial {
   title: string;
 }
 
+export interface Education {
+  period: string;
+  institution: string;
+  degree: string;
+  details?: string;
+}
+
+export interface Experience {
+  period: string;
+  company: string;
+  title: string;
+  details?: string;
+}
+
 export interface TeamMember {
+  id: string; // e.g., 'windijarto'
   name: string;
   title: string;
   imageUrl: string;
-  bio: string;
+  bio: string; // Short bio for the card
+  fullBio: string; // Longer bio for the detail page
+  education: Education[];
+  experience: Experience[];
+  consultingProjects: ConsultingProject[];
 }

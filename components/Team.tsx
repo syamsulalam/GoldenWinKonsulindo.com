@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TEAM_MEMBERS } from '../constants';
 import type { TeamMember } from '../types';
 
 const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-gray-200 h-full flex flex-col">
-    <img src={member.imageUrl} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-brand-bg-alt" />
-    <h3 className="text-xl font-bold text-brand-dark mb-1">{member.name}</h3>
-    <p className="text-brand-gold font-semibold mb-3">{member.title}</p>
-    <p className="text-gray-600 text-sm flex-grow">{member.bio}</p>
-  </div>
+  <Link to={`/team/${member.id}`} className="block h-full group">
+    <div className="bg-white p-6 rounded-lg shadow-lg text-center transform group-hover:-translate-y-2 transition-transform duration-300 border border-gray-200 h-full flex flex-col group-hover:shadow-xl group-hover:border-brand-gold">
+      <img src={member.imageUrl} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-brand-bg-alt" />
+      <h3 className="text-xl font-bold text-brand-dark mb-1">{member.name}</h3>
+      <p className="text-brand-gold font-semibold mb-3">{member.title}</p>
+      <p className="text-gray-600 text-sm flex-grow">{member.bio}</p>
+    </div>
+  </Link>
 );
 
 const Team: React.FC = () => {

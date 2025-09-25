@@ -61,7 +61,7 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Add a strong Call to Action.
   - [x] Display contact information.
 
-### Phase 3: Finalization
+### Phase 3: Finalization & Multi-Page Implementation
 
 - [x] **Task 10: Integration and Final Review**
   - [x] Assemble all sections within `App.tsx` in the correct order.
@@ -74,3 +74,11 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Ensure all accessibility best practices are followed.
   - [x] Update Navbar text color to change on scroll.
   - [x] Update contact info in Contact section and Footer.
+
+- [x] **Task 12: Implement Team Member Detail Pages**
+  - [x] Add `react-router-dom` for navigation.
+  - [x] Restructure `App.tsx` to handle routing.
+  - [x] Create `HomePage.tsx` and `TeamMemberPage.tsx`.
+  - [x] Update data structures in `types.ts` and `constants.ts` with detailed CV info.
+  - [x] Make team member cards on homepage link to their respective detail pages.
+  - [x] Update `Navbar.tsx` to support cross-page anchor link navigation.

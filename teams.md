@@ -6,7 +6,32 @@ This file stores the transcribed CV data for the key personnel of GoldenWinKonsu
 
 ## Dr. Windijarto, SE. MBA
 
-(CV Data for Dr. Windijarto would be placed here if provided in the same format)
+### Personal
+- **Name**: Dr. Windijarto, SE. MBA
+- **Born**: Pacitan, 14 April 1963
+- **Nationality**: Indonesia
+- **Profession**: Lecturer, Researcher, Consultant in Social, Economic, and Management fields.
+- **Expertise**: Economics and Financial Management.
+
+### Education
+- **2008**: Doctorate in Economics (Doktor Ilmu Ekonomi), Universitas Airlangga.
+- **1994**: Master of Business Administration (MBA), University of Central Arkansas, Conway, USA.
+- **1987**: Bachelor of Economics (Sarjana Ekonomi, S1), Management Major, Universitas Airlangga.
+
+### Work Experience (Academic)
+- **1988 - Present**: Lecturer, Faculty of Economics and Business, Universitas Airlangga.
+- **2015 - Present**: Head of LPMB-FEB UNAIR.
+- **2015 - 2020**: Head of S2 PSDM Program, Postgraduate School.
+- **2010 - 2015**: Vice Dean III, FEB Unair.
+- **2004 - 2010**: Head of Management and Business Development Laboratory (LPMB), Faculty of Economics, Universitas Airlangga.
+
+### Consulting Experience Highlights
+- **2024**: Feasibility Study for Vocational Faculty Establishment (Universitas Airlangga), Company Long-Term Plan 2025-2030 (PT Berkah Industri Mesin Angkat), Concession Study for Batang Multipurpose Terminal (PT Pelabuhan Indonesia).
+- **2023**: Cooperation Plan Study for State-Owned Goods Infrastructure (PT Pelabuhan Indonesia), Corporate Financial Restructuring (PT Petrokimia Gresik).
+- **2022**: Feasibility and Due Diligence studies for various clients including PT Pelabuhan Indonesia and PT Perta Arun Gas.
+- **2021**: Talent Management Program (PT Petro Oxo Nusantara), Prospectus Study (Pemprov Jawa Timur), Non-Productive Asset Utilization Study (PT Semen Indonesia Logistik).
+- **2020**: Social Economy Study for Petrochemical Complex (ITS & PT Pertamina), Business Feasibility Study (PT Sinergi Mitra Investasi), Amdal Social Economy Study (PT Pertamina NGRR Tuban).
+- **Extensive projects dating back to 2015** covering feasibility studies, regional economic analysis, human resources consulting, and financial valuations for major state-owned and private corporations.
 
 ---
 

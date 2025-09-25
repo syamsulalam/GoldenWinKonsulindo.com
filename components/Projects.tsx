@@ -1,19 +1,23 @@
 import React, { useState, useMemo } from 'react';
-import { CONSULTING_PROJECTS } from '../constants';
+import { TEAM_MEMBERS } from '../constants';
+import type { ConsultingProject } from '../types';
+
+const leadConsultant = TEAM_MEMBERS.find(member => member.id === 'windijarto');
+const ALL_PROJECTS: ConsultingProject[] = leadConsultant ? leadConsultant.consultingProjects : [];
 
 const Projects: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   const years = useMemo(() => {
-    const uniqueYears = [...new Set(CONSULTING_PROJECTS.map(p => p.year))];
+    const uniqueYears = [...new Set(ALL_PROJECTS.map(p => p.year))];
     return uniqueYears.sort((a, b) => b - a);
   }, []);
 
   const filteredProjects = useMemo(() => {
     if (!selectedYear) {
-      return CONSULTING_PROJECTS;
+      return ALL_PROJECTS;
     }
-    return CONSULTING_PROJECTS.filter(p => p.year === selectedYear);
+    return ALL_PROJECTS.filter(p => p.year === selectedYear);
   }, [selectedYear]);
 
   return (
@@ -21,7 +25,7 @@ const Projects: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-gold font-serif">Project Portfolio</h2>
-          <p className="text-lg text-gray-600 mt-2">A selection of impactful consulting engagements.</p>
+          <p className="text-lg text-gray-600 mt-2">A selection of impactful consulting engagements led by Dr. Windijarto.</p>
           <div className="w-24 h-1 bg-brand-gold mx-auto mt-4"></div>
         </div>
 

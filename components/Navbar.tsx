@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,15 +26,28 @@ const Navbar: React.FC = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
     e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    const targetId = href.split('#')[1];
     setIsMenuOpen(false);
+
+    if (location.pathname === '/' && document.getElementById(targetId)) {
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        navigate('/');
+        setTimeout(() => {
+            document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    }
   };
 
+  const logoColor = isScrolled || location.pathname !== '/' ? 'text-brand-gold' : 'text-white';
+  const linkColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark hover:text-brand-gold' : 'text-white hover:text-gray-300';
+  const mobileIconColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark' : 'text-white';
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-light/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-light/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="text-xl font-bold text-brand-gold">
+          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className={`text-xl font-bold transition-colors duration-300 ${logoColor}`}>
             GoldenWinKonsulindo
           </a>
 
@@ -41,7 +57,7 @@ const Navbar: React.FC = () => {
                 key={link.href} 
                 href={link.href} 
                 onClick={(e) => handleLinkClick(e, link.href)} 
-                className={`transition-colors duration-300 ${isScrolled ? 'text-brand-dark hover:text-brand-gold' : 'text-white hover:text-gray-300'}`}
+                className={`transition-colors duration-300 ${linkColor}`}
               >
                 {link.label}
               </a>
@@ -49,7 +65,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-brand-dark' : 'text-white'}`}>
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`focus:outline-none transition-colors duration-300 ${mobileIconColor}`}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
               </svg>
