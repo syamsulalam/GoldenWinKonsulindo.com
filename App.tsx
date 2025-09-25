@@ -7,14 +7,13 @@ import TeamMemberPage from './pages/TeamMemberPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import IndustriesPage from './pages/IndustriesPage';
 import CareerPage from './pages/CareerPage';
+import ArticleListPage from './pages/ArticleListPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
 
-// Component to scroll to top on route change
-const ScrollToTop: React.FC = () => {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Don't scroll to top for hash links on the same page
-    if (window.location.hash) return;
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -23,7 +22,7 @@ const ScrollToTop: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="bg-brand-light text-brand-dark font-sans">
+    <>
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -31,10 +30,12 @@ const App: React.FC = () => {
         <Route path="/team/:memberId" element={<TeamMemberPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
-        <Route path="/career" element={<CareerPage />} />
+        <Route path="/careers" element={<CareerPage />} />
+        <Route path="/articles" element={<ArticleListPage />} />
+        <Route path="/articles/:articleId" element={<ArticleDetailPage />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 };
 
