@@ -33,17 +33,18 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Populate `constants.ts` with the expanded data for all new services, industries, and create placeholder blog articles for each category.
 
 - [ ] **Task 16: Implement Mega-Menu Navbar**
+  - [x] Add the new top-level links: "Industries" and "Career".
   - [ ] Refactor `Navbar.tsx` to support complex, multi-level dropdown menus for "Services" and "Insights".
-  - [ ] Add the new top-level links: "Industries" and "Career".
 
 - [x] **Task 17: Build Service Pages**
   - [x] Create a generic `ServiceDetailPage.tsx` component to display detailed information about a service and its sub-services.
   - [x] Add new routes in `App.tsx` for each individual service page (e.g., `/services/business-planning`).
   - [x] Update the `Services.tsx` component on the homepage to link each service card to its new detail page.
 
-- [ ] **Task 18: Build Industries Page**
-  - [ ] Create an `IndustriesPage.tsx` component that lists all served industries with brief descriptions.
-  - [ ] Add the corresponding route in `App.tsx`.
+- [x] **Task 18: Build Industries Page**
+  - [x] Create an `IndustriesPage.tsx` component that lists all served industries with brief descriptions.
+  - [x] Add the corresponding route in `App.tsx`.
+  - [x] Update `Navbar.tsx` to link to the new Industries page.
 
 - [ ] **Task 19: Build Career Page**
   - [ ] Create `CareerPage.tsx` to house career information and job listings.

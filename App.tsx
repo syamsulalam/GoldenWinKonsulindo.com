@@ -5,12 +5,15 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import TeamMemberPage from './pages/TeamMemberPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import IndustriesPage from './pages/IndustriesPage';
 
 // Component to scroll to top on route change
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Don't scroll to top for hash links on the same page
+    if (window.location.hash) return;
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -26,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/team/:memberId" element={<TeamMemberPage />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+        <Route path="/industries" element={<IndustriesPage />} />
       </Routes>
       <Footer />
     </div>

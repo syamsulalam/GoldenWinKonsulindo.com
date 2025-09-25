@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About Us' },
+  { href: '/#services', label: 'Services' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/#team', label: 'Team' },
+  // { href: '/career', label: 'Career' }, // To be added
+  // { href: '/insights', label: 'Insights' }, // To be added
+  { href: '/#contact', label: 'Contact' },
+];
+
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,38 +26,34 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#team', label: 'Team' },
-    { href: '#services', label: 'Services' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
-  ];
-
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
     e.preventDefault();
-    const targetId = href.split('#')[1];
     setIsMenuOpen(false);
 
-    if (location.pathname === '/' && document.getElementById(targetId)) {
+    if (href.startsWith('/#')) {
+      const targetId = href.substring(2);
+      if (location.pathname === '/') {
         document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
-    } else {
+      } else {
         navigate('/');
         setTimeout(() => {
-            document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
         }, 100);
+      }
+    } else {
+      navigate(href);
     }
   };
   
   const linkColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark hover:text-brand-gold' : 'text-white hover:text-gray-300';
   const mobileIconColor = isScrolled || location.pathname !== '/' ? 'text-brand-dark' : 'text-white';
+  const isHomePage = location.pathname === '/';
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-light/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-brand-light/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="flex items-center">
+          <a href="/" onClick={(e) => handleLinkClick(e, '/')} className="flex items-center">
             <img src="/img/logo.png" alt="GoldenWinKonsulindo Logo" className="h-10 w-auto" />
           </a>
 
