@@ -1,4 +1,3 @@
-
 # Task List for GoldenWinKonsulindo.com Development
 
 This list breaks down the development of the website into manageable tasks.
@@ -76,14 +75,19 @@ This list breaks down the development of the website into manageable tasks.
   - [x] Update contact info in Contact section and Footer.
 
 - [x] **Task 12: Implement Team Member Detail Pages**
-  - [x] Add `react-router-dom` for navigation.
-  - [x] Restructure `App.tsx` to handle routing.
-  - [x] Create `HomePage.tsx` and `TeamMemberPage.tsx`.
-  - [x] Update data structures in `types.ts` and `constants.ts` with detailed CV info.
+  - [x] Implement multi-page routing using `react-router-dom`.
+  - [x] Restructure `App.tsx` to handle page routes.
+  - [x] Create the `TeamMemberPage.tsx` component for detailed profiles.
+  - [x] Add Dr. Windijarto's full CV to `teams.md` and update `constants.ts` with all member details.
   - [x] Make team member cards on homepage link to their respective detail pages.
-  - [x] Update `Navbar.tsx` to support cross-page anchor link navigation.
+  - [x] Update `Navbar.tsx` to handle routing between pages and homepage sections.
 
 - [x] **Task 13: Asset & Team Updates**
     - [x] Add Syamsul Alam to the team and update `teams.md`.
     - [x] Update all image paths to use a centralized `/img/` directory.
     - [x] Replace text logo in Navbar with an image logo.
+
+- [x] **Task 14: Add Skills Section to Team Profiles**
+    - [x] Update `TeamMember` type to include a `skills` array.
+    - [x] Populate skills data for all team members in `constants.ts`.
+    - [x] Conditionally render a "Skills Highlights" section on `TeamMemberPage.tsx`.

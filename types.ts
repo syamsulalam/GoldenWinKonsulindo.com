@@ -41,5 +41,6 @@ export interface TeamMember {
   fullBio: string; // Longer bio for the detail page
   education: Education[];
   experience: Experience[];
+  skills?: string[];
   consultingProjects: ConsultingProject[];
 }

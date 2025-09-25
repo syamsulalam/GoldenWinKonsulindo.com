@@ -27,6 +27,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         { period: "2015 - 2020", company: "Universitas Airlangga Postgraduate School", title: "Head of S2 PSDM Program" },
         { period: "2010 - 2015", company: "FEB Unair", title: "Vice Dean III" },
     ],
+    skills: [
+        "Financial Management",
+        "Economic Analysis",
+        "Feasibility Studies",
+        "Corporate Strategy",
+        "Business Valuation",
+        "Public Policy Consulting"
+    ],
     consultingProjects: [
       { year: 2024, name: "Feasibility Study and Partnership Scheme for Vocational Faculty Establishment in Gresik", client: "Universitas Airlangga" },
       { year: 2024, name: "Company Long-Term Plan Formulation 2025-2030", client: "PT Berkah Industri Mesin Angkat" },
@@ -61,6 +69,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         { period: "2022 - Present", company: "Universitas Airlangga", title: "Lecturer, Doctoral Program in Human Resource Development" },
         { period: "2014 - Present", company: "Universitas Kristen Petra", title: "Lecturer, Business Management" },
     ],
+    skills: [
+        "Strategic Management",
+        "IT & Business Integration",
+        "Business Process Improvement",
+        "Corporate Planning (RJPP)",
+        "Feasibility Studies",
+        "Technology Management"
+    ],
     consultingProjects: [
         { year: 2025, name: "Feasibility Study & Basic Design for Sports Facility Construction (Driving Range & Paddle Tennis)", client: "PT SIER" },
         { year: 2025, name: "Environmental Monitoring and Management for NGRR Tuban Refinery", client: "PT Pertamina (Persero)" },
@@ -84,6 +100,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         { period: "Des 2024 - Jan 2025", company: "AB & Partner's Law Office, Surabaya", title: "Legal Intern", details: "Analyzed breach of contract cases, conducted regulatory inventories, reviewed agreements, and drafted legal opinions." },
         { period: "Jul 2023 - Okt 2023", company: "BKMP UNAIR", title: "Member, Socioeconomic and Population Survey Team", details: "Conducted legal reviews on regulations for Hazardous Waste Management, Environmental Permits, and Labor Compliance." },
     ],
+    skills: [
+        "Legal Compliance",
+        "Contract Drafting & Review",
+        "Legal Research & Opinion",
+        "Regulatory Analysis",
+        "Permit Processing (OSS)",
+        "Risk Assessment"
+    ],
     consultingProjects: []
   },
   {
@@ -98,6 +122,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
     experience: [
         { period: "2016 - Present", company: "Multiple Ventures", title: "Founder & Company Owner", details: "Founded and directs a portfolio of technology and service-based companies. Specializes in providing digital infrastructure, including web hosting, development, and IT solutions for a diverse client base, from individual professionals to growing businesses." },
+    ],
+    skills: [
+        "Entrepreneurship",
+        "Digital Strategy",
+        "Web Development & Hosting",
+        "Business Development",
+        "IT Infrastructure",
+        "E-commerce Solutions"
     ],
     consultingProjects: []
   }

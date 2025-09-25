@@ -81,6 +81,18 @@ const TeamMemberPage: React.FC = () => {
                             </ul>
                         </SectionCard>
 
+                        {member.skills && member.skills.length > 0 && (
+                            <SectionCard title="Skills Highlights">
+                                <div className="flex flex-wrap gap-2">
+                                    {member.skills.map((skill, index) => (
+                                        <span key={index} className="bg-brand-bg-alt text-brand-dark font-medium px-3 py-1 rounded-full text-sm border border-gray-200">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </SectionCard>
+                        )}
+
                         {member.consultingProjects.length > 0 && (
                             <SectionCard title="Key Consulting Projects">
                                <div className="overflow-x-auto -mx-6">
