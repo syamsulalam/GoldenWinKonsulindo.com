@@ -1,5 +1,159 @@
 
-import type { Testimonial, TeamMember } from './types';
+import type { Testimonial, TeamMember, Service, Industry, Article } from './types';
+import { ArticleCategory } from './types';
+import {
+    ScaleIcon, ChartBarIcon, BriefcaseIcon, UsersIcon, GlobeIcon, DocumentTextIcon, BeakerIcon,
+    BuildingLibraryIcon, TruckIcon, CogIcon, CpuChipIcon, HeartIcon, FireIcon, HomeIcon
+} from './components/Icons';
+
+
+export const SERVICES_DATA: Service[] = [
+    {
+        id: "business-planning",
+        icon: ScaleIcon,
+        title: "Business Planning",
+        description: "Crafting robust strategies and feasibility studies to ensure project viability and long-term success from the ground up.",
+        longDescription: "Our Business Planning services provide the foundational analysis required for any successful venture. We conduct exhaustive feasibility studies to assess market, financial, and operational viability, and develop comprehensive business plans (RBB) that serve as a roadmap for execution, funding, and growth.",
+        subServices: [
+            { title: "Feasibility Studies", description: "In-depth analysis of project viability, assessing financial, technical, and market factors." },
+            { title: "Business Plan Development (RBB)", description: "Creating detailed, data-driven business plans for startups and new ventures." }
+        ]
+    },
+    {
+        id: "corporate-planning",
+        icon: BriefcaseIcon,
+        title: "Corporate Planning",
+        description: "Guiding established organizations through complex strategic shifts like M&A, process optimization, and long-term roadmapping.",
+        longDescription: "For established corporations, we offer strategic planning services to navigate growth and transformation. Our expertise covers complex Mergers & Acquisitions, optimizing workflows through Business Process Management (BPM), and charting a clear future with divisional and corporate-level roadmaps.",
+        subServices: [
+            { title: "Mergers & Acquisition (M&A)", description: "Strategic advisory through the entire M&A lifecycle, from valuation to integration." },
+            { title: "Business Process Management (BPM)", description: "Analyzing and redesigning workflows to improve efficiency, reduce costs, and enhance quality." },
+            { title: "Division Roadmaps", description: "Developing long-range strategic plans for specific business units to align with corporate goals." }
+        ]
+    },
+    {
+        id: "corporate-financial-planning",
+        icon: ChartBarIcon,
+        title: "Corporate Financial Planning",
+        description: "Maximizing corporate value through expert financial modeling, valuation, and sophisticated investment analysis.",
+        longDescription: "Our financial experts provide critical insights to enhance fiscal health and drive value. We build sophisticated financial models for forecasting and decision-making, conduct precise corporate valuations, and perform rigorous investment analysis to guide capital allocation and strategic financial decisions.",
+        subServices: [
+            { title: "Financial Modeling", description: "Building dynamic financial models for forecasting, valuation, and scenario planning." },
+            { title: "Corporate Valuation", description: "Providing accurate and defensible business valuations for M&A, financial reporting, and strategic planning." },
+            { title: "Investment Analysis", description: "Evaluating investment opportunities to maximize returns and manage risk." }
+        ]
+    },
+    {
+        id: "corporate-research",
+        icon: BeakerIcon,
+        title: "Corporate Research",
+        description: "Delivering data-driven insights with comprehensive market research and rigorous economic impact analysis.",
+        longDescription: "Informed decisions are built on solid data. Our corporate research services offer deep dives into market dynamics, competitive landscapes, and consumer behavior. We also specialize in conducting economic impact analyses to understand the broader effects of projects and policies.",
+        subServices: [
+            { title: "Market Research", description: "Conducting qualitative and quantitative research to identify market trends, opportunities, and threats." },
+            { title: "Economic Impact Analysis", description: "Assessing the effect of projects, policies, or investments on the wider economy." }
+        ]
+    },
+    {
+        id: "human-resources-planning",
+        icon: UsersIcon,
+        title: "Human Resources Planning",
+        description: "Aligning your workforce with business goals through strategic talent management and organizational design.",
+        longDescription: "Your people are your greatest asset. We help you maximize their potential through strategic HR planning, including developing talent management frameworks, optimizing your organizational design for efficiency, and creating comprehensive HR strategies that support your business objectives.",
+        subServices: [
+            { title: "Talent Management", description: "Strategies for attracting, developing, and retaining top talent." },
+            { title: "Organizational Design", description: "Structuring your organization to improve communication, efficiency, and effectiveness." },
+            { title: "HR Strategy", description: "Developing a long-term HR plan that aligns with your company's strategic goals." }
+        ]
+    },
+    {
+        id: "information-system-planning",
+        icon: CpuChipIcon,
+        title: "Information System Planning",
+        description: "Navigating digital transformation with strategic IT audits and clear technology implementation roadmaps.",
+        longDescription: "In the digital age, a coherent IT strategy is crucial. We provide expert guidance through comprehensive IT strategy development, system audits to identify gaps and opportunities, and the creation of clear digital transformation roadmaps to guide your technology investments and implementation.",
+        subServices: [
+            { title: "IT Strategy & Audits", description: "Assessing current IT infrastructure and developing a strategy for future growth and security." },
+            { title: "Digital Transformation Roadmaps", description: "Creating a step-by-step plan for adopting new technologies and processes." }
+        ]
+    },
+    {
+        id: "reporting-governance",
+        icon: DocumentTextIcon,
+        title: "Reporting & Governance",
+        description: "Enhancing transparency and stakeholder confidence with professional sustainability and annual report development.",
+        longDescription: "Clear, compelling reporting is key to stakeholder trust. We specialize in developing comprehensive annual reports that communicate financial health and strategic direction, as well as sustainability reports that showcase your commitment to ESG (Environmental, Social, and Governance) principles.",
+        subServices: [
+            { title: "Sustainability Reporting", description: "Developing reports that communicate your organization's ESG performance." },
+            { title: "Annual Report Development", description: "Crafting professional and compliant annual reports for stakeholders and regulators." }
+        ]
+    }
+];
+
+export const INDUSTRIES_DATA: Industry[] = [
+    { name: "Banking & Finance", description: "Navigating regulatory complexity and digital disruption with strategies for growth and risk management.", icon: BuildingLibraryIcon },
+    { name: "Logistics & Supply Chain", description: "Optimizing operations, improving efficiency, and building resilient supply chains for the modern economy.", icon: TruckIcon },
+    { name: "Manufacturing", description: "Driving operational excellence, process improvement, and strategic planning for industrial leaders.", icon: CogIcon },
+    { name: "Technology", description: "Guiding tech firms through rapid growth cycles with market analysis, IT strategy, and digital transformation.", icon: CpuChipIcon },
+    { name: "Healthcare", description: "Providing strategic planning and financial consulting for hospitals, clinics, and healthcare providers.", icon: HeartIcon },
+    { name: "Energy & Resources", description: "Advising on large-scale energy projects, from feasibility and impact assessment to financial planning.", icon: FireIcon },
+    { name: "Public Sector", description: "Assisting government agencies with economic development, policy analysis, and public-private partnerships.", icon: ScaleIcon },
+    { name: "Real Estate & Construction", description: "Delivering feasibility studies, market analysis, and financial modeling for property development projects.", icon: HomeIcon },
+];
+
+export const ARTICLES_DATA: Article[] = [
+    {
+        id: 'economic-outlook-2025',
+        title: 'Indonesia Economic Outlook 2025: Navigating Global Headwinds',
+        category: ArticleCategory.Research,
+        author: 'Dr. Windijarto, SE. MBA',
+        date: 'October 22, 2024',
+        imageUrl: 'https://picsum.photos/800/600?random=1',
+        summary: 'A deep dive into the macroeconomic trends, challenges, and opportunities facing Indonesia in the upcoming year. This research paper explores key sectors poised for growth and provides strategic recommendations.',
+        content: 'Full content of the research paper would go here, detailing methodology, findings, and analysis on various economic indicators and their implications for businesses in Indonesia.'
+    },
+    {
+        id: 'digital-transformation-webinar',
+        title: 'Webinar Recap: The Digital Transformation Roadmap for SMEs',
+        category: ArticleCategory.Webinar,
+        author: 'Syamsul Alam',
+        date: 'September 15, 2024',
+        imageUrl: 'https://picsum.photos/800/600?random=2',
+        summary: 'Highlights from our recent webinar on how Small and Medium Enterprises can leverage technology to improve efficiency, reach new markets, and build a competitive edge in the digital age.',
+        content: 'This article would provide a summary of the key takeaways from the webinar, perhaps with embedded video clips, presentation slides, and a Q&A summary.'
+    },
+    {
+        id: 'esg-reporting-importance',
+        title: 'Why ESG Reporting is No Longer Optional for Modern Corporations',
+        category: ArticleCategory.Blog,
+        author: 'Dr. Rr. Rooswanti Putri A.A.',
+        date: 'August 05, 2024',
+        imageUrl: 'https://picsum.photos/800/600?random=3',
+        summary: 'An insightful blog post on the rising importance of Environmental, Social, and Governance (ESG) reporting for attracting investment, building brand reputation, and ensuring long-term sustainability.',
+        content: 'The full blog post would explore the drivers behind the ESG movement, the benefits of transparent reporting, and practical first steps for companies looking to develop their ESG strategy.'
+    },
+    {
+        id: 'new-partnership-announcement',
+        title: 'GoldenWinKonsulindo Announces Strategic Partnership with a Leading Logistics Firm',
+        category: ArticleCategory.News,
+        author: 'Corporate Communications',
+        date: 'July 28, 2024',
+        imageUrl: 'https://picsum.photos/800/600?random=4',
+        summary: 'We are thrilled to announce a new partnership aimed at transforming supply chain efficiency in the region. This collaboration will combine our strategic consulting expertise with cutting-edge logistics technology.',
+        content: 'A press release style article detailing the nature of the partnership, the goals, and quotes from the leaders of both organizations.'
+    },
+    {
+        id: 'community-development-initiative',
+        title: 'Our Commitment to Community: Supporting Local Education Initiatives',
+        category: ArticleCategory.CSR,
+        author: 'Corporate Communications',
+        date: 'June 10, 2024',
+        imageUrl: 'https://picsum.photos/800/600?random=5',
+        summary: 'As part of our commitment to Corporate Social Responsibility, we are proud to launch a new program supporting educational workshops for underprivileged students in Surabaya. Learn more about our initiative.',
+        content: 'This article would detail the CSR program, its objectives, how the community can get involved, and the long-term vision for our social impact efforts.'
+    }
+];
+
 
 export const PROFILE_DATA = {
   name: "Dr. Windijarto, SE. MBA",

@@ -1,10 +1,44 @@
 import type React from 'react';
 
-export interface Service {
-  icon: React.ElementType;
+export interface SubService {
   title: string;
   description: string;
 }
+
+export interface Service {
+  id: string; // for URL slug, e.g., 'business-planning'
+  icon: React.ElementType;
+  title: string;
+  description: string; // short description for homepage card
+  longDescription: string; // longer description for detail page
+  subServices: SubService[];
+}
+
+export interface Industry {
+  name: string;
+  description: string;
+  icon: React.ElementType;
+}
+
+export enum ArticleCategory {
+  Research = 'Research',
+  Webinar = 'Webinar',
+  Blog = 'Blog',
+  News = 'News',
+  CSR = 'CSR',
+}
+
+export interface Article {
+  id: string; // for URL slug
+  title: string;
+  category: ArticleCategory;
+  author: string; // Could be a TeamMember ID/Name
+  date: string; // e.g., 'October 26, 2024'
+  imageUrl: string;
+  summary: string;
+  content: string; 
+}
+
 
 export interface ConsultingProject {
   year: number;
